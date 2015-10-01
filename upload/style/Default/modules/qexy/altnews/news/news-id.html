@@ -1,0 +1,25 @@
+<div class="altnews-id" id="<?php echo $data["ID"]; ?>">
+	<div class="content">
+		<div class="image"><img src="<?php echo $data['IMG']; ?>" alt="IMG" /></div>
+		<div class="text">
+			<div class="altnews-id-header">
+				<div class="title"><?php echo $data['TITLE']; ?></div><!--
+				--><div class="votes"><?php echo $data['VOTES']; ?></div>
+			</div>
+			<?php echo $data['TEXT']; ?>
+		</div>
+	</div>
+
+	<div class="altnews-id-footer">
+		<div class="left-block">
+			<ul>
+				<li rel="tooltip" title="Дата создания"><i class="icon-time"></i> <?php echo $data['DATE_CREATE']; ?></li><!--
+				--><li rel="tooltip" title="Категория"><i class="icon-book"></i> <a href="<?php echo MOD_URL; ?>&cid=<?php echo $data['CID']; ?>"><?php echo $data['CATEGORY']; ?></a></li><!--
+				--><?php echo $data['COMMENTS']; ?><!--
+				--><?php echo $data['VIEWS']; ?>
+			</ul>
+		</div><!--
+
+		--><div class="right-block"><a href="<?php echo MOD_URL; ?>&nid=<?php echo $data['ID']; ?>" class="btn btn-primary">Читать далее...</a></div>
+	</div>
+</div>

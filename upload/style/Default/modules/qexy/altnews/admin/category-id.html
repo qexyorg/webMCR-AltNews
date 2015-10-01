@@ -1,0 +1,10 @@
+<tr data-id="<?php echo $data['ID']; ?>">
+	<td><?php echo $data['ID']; ?></td>
+	<td><a href="<?php echo MOD_URL."&cid=".$data['ID']; ?>" target="_blank" rel="tooltip" title="Откроется в новой вкладке"><?php echo $data['TITLE']; ?></a></td>
+	<td>
+		<div class="btn-group">
+			<a href="<?php echo MOD_URL."&do=admin&op=categories&act=edit&cid=".$data['ID']; ?>" class="btn btn-mini"><i class="icon-pencil"></i></a>
+			<a href="#" class="btn btn-mini btn-inverse remove-category"><i class="icon-remove icon-white"></i></a>
+		</div>
+	</td>
+</tr>

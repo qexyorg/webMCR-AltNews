@@ -1,0 +1,15 @@
+<div class="altnews-comments-id" data-id="<?php echo $data['ID']; ?>">
+	<div class="content">
+		<div class="avatar">
+			<a class="thumbnail" href="#"><img src="<?php echo $data['AVATAR']; ?>" alt="IMG" /></a>
+			<b><?php echo $data['LOGIN']; ?></b>
+		</div><!--
+		--><div class="text"><?php echo $data['TEXT']; ?></div>
+	</div>
+	<div class="altnews-com-id-footer">
+		<ul>
+			<li class="date-update"><i class="icon-time" rel="tooltip" title="Дата и время последнего изменения"></i> <span><?php echo $data['DATE_UPDATE']; ?></span></li>
+			<?php echo $data['CONTROL']; ?>
+		</ul>
+	</div>
+</div>

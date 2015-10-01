@@ -1,0 +1,21 @@
+<div class="altnews-admin">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Название</th>
+				<th>Действие</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<?php echo $data['CATEGORIES']; ?>
+		</tbody>
+	</table>
+
+	<div class="altnews-actions">
+		<div><a href="<?php echo MOD_URL ?>&do=admin&op=categories&act=add" class="btn btn-primary">Добавить категорию</a></div>
+	</div>
+
+	<?php echo $data['PAGINATION']; ?>
+</div>

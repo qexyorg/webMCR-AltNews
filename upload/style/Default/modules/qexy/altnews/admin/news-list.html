@@ -1,0 +1,24 @@
+<div class="altnews-admin">
+	<div class="table-scroller">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Название</th>
+					<th>Дата изменения</th>
+					<th>Действие</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<?php echo $data['NEWS']; ?>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="altnews-actions">
+		<div><a href="<?php echo MOD_URL ?>&do=admin&op=add" class="btn btn-primary">Добавить новость</a></div>
+	</div>
+
+	<?php echo $data['PAGINATION']; ?>
+</div>

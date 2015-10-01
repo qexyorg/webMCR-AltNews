@@ -1,0 +1,72 @@
+<div class="news-change">
+	<form method="post">
+		<div class="table-scroller">
+			<table class="table table-hover table-bordered">
+
+				<tbody>
+					<tr>
+						<td class="name">Название
+							<div class="desc">- Название новости</div>
+						</td>
+						<td class="inputs"><input type="text" name="title" placeholder="Название" value="<?php echo $data['TITLE']; ?>" required></td>
+					</tr>
+
+					<tr>
+						<td class="name">Категория
+							<div class="desc">- Категория новости</div>
+						</td>
+						<td class="inputs"><select name="cid"><?php echo $data['CATEGORIES']; ?></select></td>
+					</tr>
+
+					<tr>
+						<td class="name">Изображение
+							<div class="desc">- Изображение, выводимое в списке новостей и в полной новости (Рекомендуемый формат 16x9)</div>
+						</td>
+						<td class="inputs">
+							<p><img id="news-img" src="<?php echo $data['IMG']; ?>" alt="IMG" /></p>
+							<input type="hidden" name="img-form" value="<?php echo $data['IMG']; ?>">
+							<input type="file" class="btn" name="img">
+						</td>
+					</tr>
+
+					<tr>
+						<td class="name textareas" colspan="2">Текст
+							<div class="desc">- Текст новости. (Для разделения страницы до кнопки "Читать далее", используйте тег <b>{READMORE}</b>)</div>
+							<?php echo $this->bb_panel(); ?>
+							<textarea rows="12" name="text_bb" class="bb-textarea input-block-level" required><?php echo $data['TEXT']; ?></textarea>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="name">Использовать комментарии
+						<div class="desc">- Если включено, то появится возможность комментировать новости, а так же будет вестись учет всех комментариев</div>
+						</td>
+						<td class="inputs"><input type="checkbox" name="p_comments" <?php echo $data['P_COMMENTS']; ?> value="1"></td>
+					</tr>
+
+					<tr>
+						<td class="name">Голосования
+							<div class="desc">- Если включено, то будут учитываться и выводится голосования пользователей - Likes/Dislikes</div>
+						</td>
+						<td class="inputs"><input type="checkbox" name="p_votes" <?php echo $data['P_VOTES']; ?> value="1"></td>
+					</tr>
+
+					<tr>
+						<td class="name">Счетчик просмотров
+							<div class="desc">- Если включено, то будут учитываться и выводится просмотры уникальных посетителей</div>
+						</td>
+						<td class="inputs"><input type="checkbox" name="p_views" <?php echo $data['P_VIEWS']; ?> value="1"></td>
+					</tr>
+
+					<tr>
+						<td class="submits" colspan="2">
+							<input type="hidden" name="<?php echo $data['F_SECURITY']; ?>" value="<?php echo $data['F_SET']; ?>">
+							<input type="submit" class="btn btn-primary" name="submit" value="<?php echo $data['SUBMIT']; ?>">
+						</td>
+					</tr>
+				</tbody>
+
+			</table>
+		</div>
+	</form>
+</div>

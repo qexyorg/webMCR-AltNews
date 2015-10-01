@@ -1,0 +1,65 @@
+<div class="altnews-settings">
+	<form method="post">
+		<div class="table-scroller">
+			<table class="table table-hover table-bordered">
+
+				<tbody>
+					<tr>
+						<td class="name">Название
+							<div class="desc">- Название модуля новостей (Отображается в заголовке страницы и хлебных крошках)</div>
+						</td>
+						<td class="inputs"><input type="text" name="title" placeholder="Название" value="<?php echo $this->cfg['title']; ?>" required></td>
+					</tr>
+
+					<tr>
+						<td class="name">Новостей на страницу
+							<div class="desc">- Кол-во новостей, выводимых на одну страницу</div>
+						</td>
+						<td class="inputs"><input type="text" name="rop_news" placeholder="Число" value="<?php echo $this->cfg['rop_news']; ?>" pattern="^(\d+)$" required></td>
+					</tr>
+
+					<tr>
+						<td class="name">Комментариев на страницу
+							<div class="desc">- Кол-во комментариев, выводимых на одну страницу</div>
+						</td>
+						<td class="inputs"><input type="text" name="rop_comments" placeholder="Число" value="<?php echo $this->cfg['rop_comments']; ?>" pattern="^(\d+)$" required></td>
+					</tr>
+
+					<tr>
+						<td class="name">Уровень доступа к новостям
+							<div class="desc">- Минимальный уровень доступа к новостям</div>
+						</td>
+						<td class="inputs"><input type="text" name="lvl_access" placeholder="Число" value="<?php echo $this->cfg['lvl_access']; ?>" required></td>
+					</tr>
+
+					<tr>
+						<td class="name">Уровень доступа к панели управления
+							<div class="desc">- Минимальный уровень доступа к панели управления новостями</div>
+						</td>
+						<td class="inputs"><input type="text" name="lvl_admin" placeholder="Число" value="<?php echo $this->cfg['lvl_admin']; ?>" required></td>
+					</tr>
+
+					<tr>
+						<td class="name">Использовать систему пользователей
+							<div class="desc">- Если у вас установлен модуль <a href="https://github.com/qexyorg/webMCR-User-System" target="_blank">систему пользователей</a>, то вы можете включить данную опцию</div>
+						</td>
+						<td class="inputs">
+							<select name="use_us">
+								<option value="0">Нет</option>
+								<option value="1" <?php echo $data['USE_US']; ?>>Да</option>
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="submits" colspan="2">
+							<input type="hidden" name="<?php echo $data['F_SECURITY']; ?>" value="<?php echo $data['F_SET']; ?>">
+							<input type="submit" class="btn btn-primary" name="submit" value="Сохранить">
+						</td>
+					</tr>
+				</tbody>
+
+			</table>
+		</div>
+	</form>
+</div>

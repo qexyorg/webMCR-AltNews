@@ -1,0 +1,23 @@
+<div class="altnews-full">
+	<div class="content">
+		<div class="title"><?php echo $data['TITLE']; ?></div>
+		<div class="image"><img src="<?php echo $data['IMG']; ?>" alt="IMG" /></div>
+		<div class="text">
+			<?php echo $data['TEXT']; ?>
+		</div>
+	</div>
+
+	<div class="altnews-full-footer">
+		<div class="left-block">
+			<ul>
+				<li rel="tooltip" title="Дата создания"><i class="icon-time"></i> <?php echo $data['DATE_CREATE']; ?></li><!--
+				--><li rel="tooltip" title="Категория"><i class="icon-book"></i> <a href="<?php echo MOD_URL; ?>&cid=<?php echo $data['CID']; ?>"><?php echo $data['CATEGORY']; ?></a></li><!--
+				--><?php echo $data['COMMENTS']; ?><!--
+				--><?php echo $data['VIEWS']; ?><!--
+				--><li><?php echo $data['VOTES']; ?></li>
+			</ul>
+		</div>
+	</div>
+
+	<?php echo $data['COMMENTS_LIST']; ?>
+</div>

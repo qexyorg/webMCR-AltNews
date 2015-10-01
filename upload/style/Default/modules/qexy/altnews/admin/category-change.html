@@ -1,0 +1,25 @@
+<div class="category-change">
+	<form method="post">
+		<div class="table-scroller">
+			<table class="table table-hover table-bordered">
+
+				<tbody>
+					<tr>
+						<td class="name">Название
+							<div class="desc">- Название категории</div>
+						</td>
+						<td class="inputs"><input type="text" name="title" placeholder="Название" value="<?php echo $data['TITLE']; ?>" required></td>
+					</tr>
+
+					<tr>
+						<td class="submits" colspan="2">
+							<input type="hidden" name="<?php echo $data['F_SECURITY']; ?>" value="<?php echo $data['F_SET']; ?>">
+							<input type="submit" class="btn btn-primary" name="submit" value="<?php echo $data['SUBMIT']; ?>">
+						</td>
+					</tr>
+				</tbody>
+
+			</table>
+		</div>
+	</form>
+</div>

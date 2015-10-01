@@ -1,0 +1,11 @@
+<tr data-id="<?php echo $data['ID']; ?>">
+	<td><?php echo $data['ID']; ?></td>
+	<td><a href="<?php echo MOD_URL."&nid=".$data['ID']; ?>" target="_blank" rel="tooltip" title="Откроется в новой вкладке"><?php echo $data['TITLE']; ?></a></td>
+	<td><?php echo $data['DATE_UPDATE']; ?></td>
+	<td>
+		<div class="btn-group">
+			<a href="<?php echo MOD_URL."&do=admin&op=edit&nid=".$data['ID']; ?>" class="btn btn-mini edit-news"><i class="icon-pencil"></i></a>
+			<a href="#" class="btn btn-mini btn-inverse remove-news"><i class="icon-remove icon-white"></i></a>
+		</div>
+	</td>
+</tr>
